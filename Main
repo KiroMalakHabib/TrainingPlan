@@ -30,7 +30,6 @@ public class Main {
 		endMonth = Integer.parseInt(splitted[1]);
 		endYear = Integer.parseInt(splitted[2]);
 		// Calculate number of weeks.
-//		numOfWeeks = calculateNumberOfWeeks(months, startDay, startMonth, startYear, endDay, endMonth, endYear);
 		numOfWeeks = calculateNumberOfWeeks(startDay, startMonth, startYear, endDay, endMonth, endYear);
 		if (numOfWeeks < 8) {
 			System.out.println("Error! Number of weeks should be more than 8 weeks!");
@@ -251,7 +250,6 @@ public class Main {
 	}
 
 	// A function calculates number of weeks.
-//	private static int calculateNumberOfWeeks(HashMap<Integer, Integer> months, int startDay, int startMonth, int startYear,
 	private static int calculateNumberOfWeeks(int startDay, int startMonth, int startYear,
 			int endDay, int endMonth, int endYear) {
 		LocalDate startDate = LocalDate.of(startYear, startMonth, startDay);
