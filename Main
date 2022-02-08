@@ -49,34 +49,12 @@ public class Main {
 		currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
 		if ((numOfWeeks - 8) % 4 == 0) {
 			numOfWeeks -= 4;
-			while (numOfWeeks > 0) {
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Recovery"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 1"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 2"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Key"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Decrement number of weeks
-				numOfWeeks -= 4;
-			}
+			// Print the repeated 4 blocks.
+			int numOfBlocks = loop(numOfWeeks, currentWeek, currentDate);
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 28*numOfBlocks);
+			// Increment current week. 
+			currentWeek += 4*numOfBlocks;
 		} else if ((numOfWeeks - 8) % 4 == 1) {
 			// Print filler week details.
 			System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Filler"));
@@ -86,34 +64,13 @@ public class Main {
 			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
 			// Decrement number of weeks
 			numOfWeeks -= 5;
-			while (numOfWeeks > 0) {
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Recovery"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 1"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 2"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Key"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Decrement number of weeks
-				numOfWeeks -= 4;
-			}
+			// Print the repeated 4 blocks.
+			int numOfBlocks = loop(numOfWeeks, currentWeek, currentDate);
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 28*numOfBlocks);
+			// Increment current week. 
+			currentWeek += 4*numOfBlocks;
+			numOfWeeks -= 4;
 		} else if ((numOfWeeks - 8) % 4 == 2) {
 			// Print extra key week details.
 			System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 2"));
@@ -129,34 +86,12 @@ public class Main {
 			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
 			// Decrement number of weeks
 			numOfWeeks -= 6;
-			while (numOfWeeks > 0) {
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Recovery"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 1"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 2"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Key"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Decrement number of weeks
-				numOfWeeks -= 4;
-			}
+			// Print the repeated 4 blocks.
+			int numOfBlocks = loop(numOfWeeks, currentWeek, currentDate);
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 28*numOfBlocks);
+			// Increment current week. 
+			currentWeek += 4*numOfBlocks;
 		} else {
 			// Print extra key week details.
 			System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 1"));
@@ -178,34 +113,12 @@ public class Main {
 			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
 			// Decrement number of weeks
 			numOfWeeks -= 7;
-			while (numOfWeeks > 0) {
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Recovery"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 1"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 2"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Print week details.
-				System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Key"));
-				// Increment current week. 
-				currentWeek++;
-				// Increment current date by 7 days to 1st day of the new week.
-				currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
-				// Decrement number of weeks
-				numOfWeeks -= 4;
-			}
+			// Print the repeated 4 blocks.
+			int numOfBlocks = loop(numOfWeeks, currentWeek, currentDate);
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 28*numOfBlocks);
+			// Increment current week. 
+			currentWeek += 4*numOfBlocks;
 		}
 		// print tapper week line.
 		System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Taper"));
@@ -282,5 +195,38 @@ public class Main {
 		return endDate;
 	}
 
+	// Loop done in each state.
+	private static int loop(int numOfWeeks, int currentWeek, LocalDate currentDate) {
+		int numOfBlocks = 0;
+		while (numOfWeeks > 0) {
+			// Print week details.
+			System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Recovery"));
+			// Increment current week. 
+			currentWeek++;
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
+			// Print week details.
+			System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 1"));
+			// Increment current week. 
+			currentWeek++;
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
+			// Print week details.
+			System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Build 2"));
+			// Increment current week. 
+			currentWeek++;
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
+			// Print week details.
+			System.out.println(weekDetails(currentWeek, currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), "Key"));
+			// Increment current week. 
+			currentWeek++;
+			// Increment current date by 7 days to 1st day of the new week.
+			currentDate = addDays(currentDate.getDayOfMonth(), currentDate.getMonthValue(), currentDate.getYear(), 7);
+			// Decrement number of weeks
+			numOfWeeks -= 4;
+			numOfBlocks++;
+		}
+		return numOfBlocks;
+	}
 }
-
